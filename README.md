@@ -13,3 +13,33 @@ Example of a main function;
     4.A function body.
 
 cout stands for console output and its used for printing something on the screen in a cpp program.
+Types -A type defines both the contents of a data element and the operations that are possible on those data.
+Variables -Something that is used in storing values.
+**Example;
+when the type of a variable named V is T, we often say that "V has type T" or,interchangbly "V is a T"ie 
+                int my_variable
+                in this case we have the type integer declaring a variable called my_variable.that is my_variable is an integer.
+**COMPLILING - Its the transformation from source code (Human Readable form) to machine code(computer executable).
+
+            **INPUT AND OUTPUT IN C++**
+The C++ language does not define any statements to do input output(io).
+Instead,C++ includes an extensive standard library that provides io.ie IOSTREAM library.
+**IOSTREAM;-Its made of two types of stream ;
+            1.Input stream -Used for taking Inputs.
+            2.Output stream-Used for giving outputs.
+Stream-A stream is a sequence of characters read from or written to an IO device.
+** STANDARD INPUT AND OUTPUT OBJECTS**
+The IO library defines four io objects;
+1.Cin (Console input)-Standard input.-Of type istream.
+2.Cout (console output)-Standard output.-Of type ostream.
+3.Cerr (Console Error) - standard error.-Of type ostream.
+4.Clog (console log) -General information.-Of type ostream.
+
+
+**Namespace**
+A namespace is a declarative region that provides a scope to the identifiers inside it.
+Identifiers are names of types,functions,variables,etc.-They are used to organize code into logical groups and to prevent name collisions
+that can occur especially when the code base includes multiple libraries.
+
+**Namespace using declarations**
+A using declaration lets us use a name from a namespace without qualyfing the name with a namespace-name::prefix
