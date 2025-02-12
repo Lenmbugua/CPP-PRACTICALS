@@ -28,7 +28,7 @@ Instead,C++ includes an extensive standard library that provides io.ie IOSTREAM 
             1.Input stream -Used for taking Inputs.
             2.Output stream-Used for giving outputs.
 Stream-A stream is a sequence of characters read from or written to an IO device.
-** STANDARD INPUT AND OUTPUT OBJECTS**
+** STANDARD INPUT AND OUTPUT OBJECTS **
 The IO library defines four io objects;
 1.Cin (Console input)-Standard input.-Of type istream.
 2.Cout (console output)-Standard output.-Of type ostream.
@@ -43,3 +43,26 @@ that can occur especially when the code base includes multiple libraries.
 
 **Namespace using declarations**
 A using declaration lets us use a name from a namespace without qualyfing the name with a namespace-name::prefix
+
+**Comments**
+Comments are program text that is ignored by the compiler.
+Comments help the human readers of our programs.
+
+There are 2 types of comments in C++
+1.Single-line comments-A single line comment starts with a double slash(//) and ends with a new line.
+                        Everything to the right of the slashes on the current line is ignored by the compiler.Example:
+                        #include <iostream>
+                        using namespace std;
+                        int main()
+                        {
+                           cout << "let's learn single-line comments.";
+                           //This is a comment.its is ignored by the compiler.
+                           return 0;
+                        }
+2.Multiple-line comments-This are comments that begins with /* and ends with the next */
+
+What will be the output of the following statements?
+1.std:: cout << " /* ";- The output will be  /*
+2.std:: cout << " */ "; The output will be */
+3.std:: cout << /*  "*/" */;-This one will throw an error because the first two delimetres acts as a comment and the last does not have a closing delimeter.
+4.std:: cout << /*  "*/" /* "/*" */;-The output will be  /*  */  /*.
