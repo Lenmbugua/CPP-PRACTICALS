@@ -11,3 +11,5 @@ Example of a main function;
     2.A function name.
     3.A (Possible empty) parameter list enclosed in parathenses.
     4.A function body.
+
+cout stands for console output and its used for printing something on the screen in a cpp program.
