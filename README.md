@@ -66,3 +66,8 @@ What will be the output of the following statements?
 2.std:: cout << " */ "; The output will be */
 3.std:: cout << /*  "*/" */;-This one will throw an error because the first two delimetres acts as a comment and the last does not have a closing delimeter.
 4.std:: cout << /*  "*/" /* "/*" */;-The output will be  /*  */  /*.
+
+**FLOW OF CONTROL**
+Statements normally execute sequentially
+**The while statement**
+A while statement repeatedly executes a section of code so long as the given condition is true.
