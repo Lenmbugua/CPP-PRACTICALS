@@ -71,3 +71,12 @@ What will be the output of the following statements?
 Statements normally execute sequentially
 **The while statement**
 A while statement repeatedly executes a section of code so long as the given condition is true.
+
+**A for statement**
+A for statement repeatedly executes a section of code so long as a given condition is true.
+In c++ you can declare and initialize the variable inside the for loop itself.
+The order of execution in a for loop is as follows;
+                                                1.initilization
+                                                2.Condition will be checked
+                                                3.Statements are executed.
+                                                4.Counter updated.                                   
