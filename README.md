@@ -79,4 +79,54 @@ The order of execution in a for loop is as follows;
                                                 1.initilization
                                                 2.Condition will be checked
                                                 3.Statements are executed.
-                                                4.Counter updated.                                   
+                                                4.Counter updated.    
+
+**Using istream as a condition.**
+When we use an istream(Input Stream) as a condition,the effect is to test the state of the stream.
+If the stream is valid,that is,if the stream hasnt encountered an error then the test succeeds.
+An istream becomes invalid when we hit end of file or encounter an invalid output such as reading a value which is not an integer.
+An istream that is in an invalid state will cause the condition to yield false.
+
+**In windows when you press ctrl+Z then press enter that is treated as end of file value in C++ ,and in linux you press ctrl+D then enter".**
+
+**IF-ELSE STATEMEMT IN C++**
+The if statement is used to execute a block of code only if a certain condition is met.
+The order of execution in an if-else statement is as follows;
+                                                            1.Test condition
+                                                            2.If the test condition is true the code inside the if block is executed.
+                                                            3.If the test condition is false the code inside the else block is executed.
+The syntax of the if statement is as follows;
+                                                if(condition)
+                                                    {
+                                                        block of code to be executed if the condition is true
+                                                    }
+The syntax of the if-else statement is as follows;
+                                                     if(condition)
+                                                            {
+                                                                block of code to be executed if the condition is true
+                                                            }
+                                                    else
+                                                            {
+                                                                block of code to be executed if the condition is false
+                                                            }
+**ELSE-IF STATEMENT**
+The else if statement is used to specfy a new condition if the first condition is false.
+The order of execution of the else-if condition is as follows;
+                                                                1.Sart with if condition check if the if condition is true.
+                                                                2.if the if condition is false we come to the else if condition.
+                                                                3.if its true the code inside the else if block will be executed if false the code in the else block will be executed.
+The syntax of the else-if statement is as follows;
+                                                     if(condition)
+                                                            {
+                                                                block of code to be executed if the condition1 is true
+                                                            }
+                                                    else if (Condition 2)
+                                                            {
+                                                                block of code to be executed if condition 1 is false and condition 2 is true.
+                                                            }
+                                                    else
+                                                            {
+                                                                block of code to be executed if the condition1 is false and condition 2 is false.
+                                                            }
+
+== this is an equality operator checking if the value is equal to the number that is entered.
