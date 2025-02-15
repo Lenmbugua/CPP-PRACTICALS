@@ -130,3 +130,25 @@ The syntax of the else-if statement is as follows;
                                                             }
 
 == this is an equality operator checking if the value is equal to the number that is entered.
+
+**Indentation and formatting in C++**
+C++ programs are largely free-format ie where we put curly braces,indentation,comments and newlines usually has no effect on what our programs mean.
+Example;The curly brace {That denotes the beginning of the body of main could be on;
+                        1.The same line as main
+                        2.At the beginning of the next line.
+                        3.Placed anywhere else we'd like.-The only requirement is that the open curly must be the first non-blank,non-comment character following mains parameter list.
+
+        **TYPES**
+Types are fundamental to any program.-They tell us what to do with our data mean and what operations we can perform on those data.
+C++ has extensive support for types;
+                                    1.Primitive types(characters,integers,floating point numbers, etc)-Defined by the language itself.
+                                    2.User-defined types -Provides mechanisms that let us define our own data types.
+
+**Primitive Built-in Types**
+The primitives types are divided into two ie 1.Arithmetic type
+                                            2.Void (Special type
+                                            )
+
+Under the arithmetic type we have two ie;Intergral points such as characters,integers,boolean values etc
+We have floating point values ie float,double etc
+                             
