@@ -151,4 +151,56 @@ The primitives types are divided into two ie 1.Arithmetic type
 
 Under the arithmetic type we have two ie;Intergral points such as characters,integers,boolean values etc
 We have floating point values ie float,double etc
-                             
+      **SIGNED AND UNSIGNED TYPES**
+Except for bool and the extended character types,the integral types may be;
+                                                                            1.Signed -Represents negative or positive numbers including zero.
+                                                                            2.UNSIGNED- Represents only values greater than or equal to zero.               
+The types int,short,long and long long are all signed.
+We obtain the correspomding unsigned type by adding unsigned to the types eg unsigned long.     
+
+**BASIC CHARACTER TYPES**
+Unlike the other integer types, there are three distinct character types;
+                                                                        1.Char-Can either be signed or unsigned depends on the compiler one is using.
+                                                                        2.Signed char
+                                                                        3.unsigned char 
+Although there are three character types, there are only two representations ie signed and unsigned.
+The plain (char) type uses one of those representations ie either signed/unsigned.
+Whenever a negative number is stored in an unsigned type its stored in its two's complement.
+
+**Machine-Level Representation of built-in types**
+Computers store data as a sequence of bits,each holding 0 or 1.
+Eg 00011011011100010110010000111011...
+Most computers deal with memory as chunks of bits of sizes that are powers of 2.eg;
+                                                                                1.Byte-The smallest chunk of addressable memory usually 8 bits.
+                                                                                2.Word-The basic unit of storage usually a small number of bytes usually 32 or 64 bits ie 4 or 8 bytes.
+
+An address can be used to refer to any of several variously sized collections of bits starting at that address.eg we can speak of the word at address 736424 or the byte at address 736427.
+To give meaning to the memory at a given address,we must know the type of value stored there.       
+The type determined how many bits are used and how to interpret those bits.                                   
+        **Type conversions**
+        Type of an object:
+Defines the data that an object might contain and what operations that object can perform.
+One of the many operations supported by many types is the ability to convert objects of the given type to other related types.
+Type conversions happen automatically when we use an object of one type where an object of another type is expected. ie for example when we declare a variable of integer type but we assign to it
+a decimal which is of a floating type.When we assign on of the non-bool arithmetic types to a bool object,the result is false if the value is 0 and true otherwise eg:
+                                                                bool b = 35;
+                                                                b is true 
+                                                                Here b will be true because the variable b is not assigned to 0.
+When we assign a bool to one of the other arithmetic types the resulting value is 1 if the bool is true and 0 if the bool is false eg;
+                                                                                                                            int i = b;
+                                                                                                                            i has the value 1 
+                                                                                                                            Here the variable b was true so the value of i will be 1.
+ When we assign a floating poi  nt value to an object of an integral type, the value is truncated ie its ignored eg;
+                                                                                                                    i = 3.14
+                                                                                                                    i has value 3
+                                                                                                                    the floating point which is .14 has been ignored.
+                                                                                                                    The value that is stored is the part before the decimal point.
+When we assign an integral value to an object of floating point type, the fractional part is always zero.eg;
+                                                                                                            double pi = i
+                                                                                                            pi has value 3.0
+                                                                                                            the pi has got a value of floating point since the double should be a floating point.
+
+                                                                        
+
+
+
