@@ -226,5 +226,28 @@ Floating point literals include either a decimal point or an exponent specified 
         3.14159e3 - 3.14159 * TEN TO POWER THREEE - 3141.59
         3.14159E-1 - 3.14159 * TEN TO POWER NEGATIVE ONE - 0.314159.
 
-
-
+        **CHARACTER AND CHARACTER STRING LITERALS**
+A character enclosed within single quotes is a literal of type char.
+Zero or more characters enclosed in double quotation marks is a string literal 
+Example; character literal: 'a', string literal: "Fruit Salad"
+The type of a string literal is array of constant chars.
+The compiler appends a null character ('\0') to every string literal
+Thus,the actual size of a string literal is more than its apparent size.
+Example;
+        'A' - A(single character)
+        "A " - A\0 (array of 2 characters -A and the null character)
+   **ESCAPE SEQUENCES**
+Characters,such as backspace or control characters,have no visible image and they are non printable.
+Other characters (like single and double quotation marks,question mark and backslash) have special meaning in the language.
+our programs cannot use any of these characters directly
+instead,we use escape sequence(begins with a backslash \) to represent such characters.
+**C++ DEFINES SEVERAL LANGUAGE SEQUENCES** Examples:
+\n -New line
+\t -Horizontal tab
+\b -backspace
+\"- Double quote
+\'-single quote
+\\ -Backslash
+\? -used for printing question mark
+\r - carriage return
+\a -Alert(bell)
