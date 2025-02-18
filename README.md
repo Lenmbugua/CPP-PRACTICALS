@@ -218,6 +218,13 @@ QUESTION;
         In hexadecimal  we will have to divide it into four sections so we will add three zeros to 11001 which will be 0001101 and then subdivide it into; 0001=1
         then 1101=9  and to represent a number in hexadecimal we start with 0x so the answer will be 0x19.                                                                     
  
+            **FLOATING POINT LITERALS**
+Floating point literals include either a decimal point or an exponent specified using scientific notation.(The exponent is indicated by either E or e)
+        EXAMPLE;
+        3.14159
+        3.14159E2 - 3.14159 * TEN TO POWER TWO - 314.159
+        3.14159e3 - 3.14159 * TEN TO POWER THREEE - 3141.59
+        3.14159E-1 - 3.14159 * TEN TO POWER NEGATIVE ONE - 0.314159.
 
 
 
