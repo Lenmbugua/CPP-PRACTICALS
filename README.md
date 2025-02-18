@@ -200,7 +200,24 @@ When we assign an integral value to an object of floating point type, the fracti
                                                                                                             pi has value 3.0
                                                                                                             the pi has got a value of floating point since the double should be a floating point.
 
-                                                                        
+                **LITERALS**
+Values such as numbers,characters or string of characters whose values are self evident are known as literals.
+                **INTEGER LITERALS**
+We can write integer literal using decimal,octal or hexadecimal notation ie:
+                                                            Decimal-Normal representation.
+                                                            Octal-Integer literals that begin with 0(zero) are interprated as octal.
+                                                            Hexadecimal-Integer literals that begin with either 0x or  0X are interprated as hexadecimal.
+QUESTION;
+        Let us write the value 35 using the 3 interprations discussed above;
+        Decimal - 25
+        in octal-We first change 25 into its binary equivalent which will be 11011 then to change it to octal we divide it in three sections for 11011 we will have to add
+        a zero on the left side so that we can change it to octal which will be 011001 then divide it in threes such that;
+                                                                                011=3
+                                                                                001=1
+                                                                                so the octal representation of 25 will be 031.
+        In hexadecimal  we will have to divide it into four sections so we will add three zeros to 11001 which will be 0001101 and then subdivide it into; 0001=1
+        then 1101=9  and to represent a number in hexadecimal we start with 0x so the answer will be 0x19.                                                                     
+ 
 
 
 
