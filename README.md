@@ -269,3 +269,29 @@ A simple variable definition consists of:
                                 3. int num4 = 1;
                                 4.int num5,num6 = 2;
 For number 3 and 4 we are initiliazing the values at the time of defining the values itself.
+
+                        **IDENTIFIERS**
+Identifiers in C++ can be composed of letters,digits and the underscore character
+Identifiers are a sequence of characters that make up a name.
+                    **RULES FOR IDENTIFIERS**
+1.Identifiers must begin with either a letter or an underscore.
+2.Identifiers are case sensitive;upper and lowercase letters are distinct.
+3.The language imposes no limit on name length.
+4.The language reserves a set of names,for its own use.These names may not be used as identifiers ie keywords and operator names.
+                    **CONVENTIONS FOR VARIABLE NAMES**
+An identifier should give some indication of its meaning.
+Variable names normally are lowercase ie sum,not Sum or SUM.
+Classes we define usually begin with an uppercase letter Eg; Sales_item
+Identifiers with multiple words should visually distinguish each word.Eg;student_score or studentScore not studentscore.                  
+
+
+                    **SCOPE OF A NAME**
+At any particular point in a program,each name that is in use refers to a specific entity - a variable,function,type and so on.
+A given name can be reused to refer to different entities at different point in the program.
+                        **SCOPE**
+A scope is a part of the program in which a name has a particular meaning.
+                {
+                    most scopes in C++ are delimited in curly braces
+                }
+The same name can refer to different entities in different scopes.
+Names are visible from the point where they are declared until the end of the scope in which the declaration appears.
