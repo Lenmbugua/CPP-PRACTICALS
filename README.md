@@ -251,3 +251,21 @@ instead,we use escape sequence(begins with a backslash \) to represent such char
 \? -used for printing question mark
 \r - carriage return
 \a -Alert(bell)
+
+                **VARIABLES**
+A variable provides us with named storage that our programs can manipulate.
+Each variable in C++ has a type.
+Type determines;
+                1.The size and layout of the variables memory
+                2.The range of values that can be stored within the memory.
+                3.The set of operations that can be applied to the variable.
+A simple variable definition consists of:
+                                        1.A type specifier,followed by
+                                        2.A list of one or more variable names separated by commas, and ends with
+                                        3.A semicolon
+                                Examples
+                                1. int num1;
+                                2. float num2,num3;
+                                3. int num4 = 1;
+                                4.int num5,num6 = 2;
+For number 3 and 4 we are initiliazing the values at the time of defining the values itself.
