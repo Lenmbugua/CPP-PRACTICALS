@@ -295,3 +295,20 @@ A scope is a part of the program in which a name has a particular meaning.
                 }
 The same name can refer to different entities in different scopes.
 Names are visible from the point where they are declared until the end of the scope in which the declaration appears.
+Example;
+            #include <iostream>
+            using namespace std;
+            int main()
+            {
+                int sum = 0;
+                for (int val = 1; val <= 10; ++val)
+                {
+                    sum = sum + val;
+                }
+                cout << "Sum of 1 to 10 inclusive is " << sum << endl;
+                return 0;
+            }
+The program defines three names ie main,sum and val.
+main-defined outside any curly braces.it has a global scope ie its accesible throughout the program.
+Sum-defined within the scope of the block that is the body of the main function.It has a block scope.
+val-defined in the scope of the for statement.
