@@ -312,3 +312,10 @@ The program defines three names ie main,sum and val.
 main-defined outside any curly braces.it has a global scope ie its accesible throughout the program.
 Sum-defined within the scope of the block that is the body of the main function.It has a block scope.
 val-defined in the scope of the for statement.
+
+                **NESTED SCOPES**
+Scopes can contain other scopes.
+We have the contained(or nested)(inner scope) scope and the conataining scope(outer scope).
+Once a name has been declared in a scope,that name can be used by scopes nested inside that scope.
+Names declared in the outer scope can also be redefined in an inner scope.
+::-This is a scope operator.
