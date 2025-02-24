@@ -339,3 +339,36 @@ Because there is no way to rebind a reference, references must be initialized.
 A reference is not an object.Instead, a reference is just another name for an already existing object.
 After a reference has been defines,all operations on that reference are actually operations on the object to which the reference is bound.
 
+                **REFERENCE DEFINITIONS**
+Multiple references can be defined in a single definition.
+Each identifier that is a reference must be preceded by the & symbol.
+Examples:
+int i = 1024;, i2 = 2048;  //i and i2 are both ints
+int &r = i, r2 = i2;  // r is a reference bound to i; r2 is an int
+int i3 = 1024, &ri = i3; //i3 is an int;ri is a reference bound to i3
+int &r3 = i3, &r4 = i2; //both r3 and r4 are references
+int &refval4 = 10;  //error:initializer must be an object
+double dval = 3.14;
+int &refvall5 = dval; //error:initiliazer must be an object.
+
+    **POINTERS**
+ A pointer is a compound type that "points to" another type.
+ They are used for indirect access to other objects.
+        **Differences from references**
+A pointer is an object in its own right.
+Pointers can be assigned and copied -A single pointer can point to several different objects over its lifetime.
+A pointer need not to be iniliazed at the time it is defined.
+Pointer definition *d,where d is the name being defined.
+Examples;
+int *ip1, *ip2;   //both ip1 and ip2 are pointers to int.
+double dp, *dp2   //dp2 is a pointer to double;dp is a double
+
+**WHAT DO POINTERS HOLD**
+A pointer holds the address of another object.
+We get the adress of an object by using the address of operator(the & operator)
+Examples:
+int ival = 50;
+int *p = &ival;    //holds the address of ival; p is a pointer to ival
+
+cout << p //gives the adress held in pointer p.
+cout << *p //gives the value that is stored in the adress pointed by p.
