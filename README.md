@@ -319,3 +319,23 @@ We have the contained(or nested)(inner scope) scope and the conataining scope(ou
 Once a name has been declared in a scope,that name can be used by scopes nested inside that scope.
 Names declared in the outer scope can also be redefined in an inner scope.
 ::-This is a scope operator.
+
+                        **COMPOUND TYPES**
+A compound  type is a type that is defined in terms of another type.Example;References,pointers
+Simple declarations we have base types which is example int and we have declarators which are variables declared example num1,num2.
+Declarators names a variable and gives the variable a type that is related to the base type.
+                            **REFERENCES**
+A reference defines an alternative name for an object.
+A reference type "refers to" another type.
+Defining a reference type:   &d where d is the name being declared.
+Examples:
+        int ival = 1024;
+        int &refval = ival;   //refval refers to (is another name for) ival.
+        int &refval2;    //error: a reference must  be initialized.
+When we define a reference,instead of copying the initiliazer's value,we bind the reference to its initiliazer.
+Once initialized,a reference remains bound to its initial object.
+There is no way to rebind a reference to refer to a different object.
+Because there is no way to rebind a reference, references must be initialized.
+A reference is not an object.Instead, a reference is just another name for an already existing object.
+After a reference has been defines,all operations on that reference are actually operations on the object to which the reference is bound.
+
