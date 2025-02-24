@@ -372,3 +372,17 @@ int *p = &ival;    //holds the address of ival; p is a pointer to ival
 
 cout << p //gives the adress held in pointer p.
 cout << *p //gives the value that is stored in the adress pointed by p.
+
+**EXAMPLES OF POINTER DEFINITIONS**
+Examples:
+double dval;
+double *pd = &dval;    //ok: initializer is the address of a double
+double *pd2 = pd;     //ok: initializer is the pointer to double
+int *pi = pd;    //error:types of pi and pd differ
+pi = &dval;  //error:assigning the address of a double to a pointer int.
+
+**NULL POINTERS**
+A null pointer does not point to any object.
+INT *p1 = nullptr;
+int *p2 = null;
+int *p3 = 0;
