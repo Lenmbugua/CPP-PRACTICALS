@@ -386,3 +386,32 @@ A null pointer does not point to any object.
 INT *p1 = nullptr;
 int *p2 = null;
 int *p3 = 0;
+
+            **const Qualifier**
+At times, we may need to define a variable whose value we know cannot be changed.
+Example: A variable to refer to the size of a buffer size.
+If we use a normal variable its easy to change the size if needed.
+But if we want to prevent the code from inadvertently giving a new value to the variable its better to use something that is constant ie cannot be changed.
+We can make a variable unchangeable by defining the variables type as const:
+                                        EXAMPLE: const int buffsize = 256;     //input buffer size
+                                             here buffsize is defined as constant
+                                             Any attempt to assign to buffsize will bring an error.
+            buffsize = 512;    //error: attempt to write to const object.
+
+**INITILIAZATION AND CONST**
+Because we cant change the value of a const object after we create ir,it must be initialized.
+EXAMPLES:
+Const int i = get_size();                       //ok: initialized at run time.
+const int j = 23;                               //ok:initiliazed at compile time
+const int k;                                    //error:k is unitinitialized const
+int a = 21;
+const int ci = a;                               //ok: the value of a is copied into ci
+int b = ci;                                     //ok: the value in ci is copied into b
+By default, const objects are local to a file.
+Sometimes we have a const variable that we want to share across multiple files but those whose initializer is not a constant expression.
+To share a const object among multiple files,we must define the variable as extern.
+                                                    Example;
+    //file_1.cc defines and initializes a const that is accesible to other files.
+    extern const int buffsize = fcn();
+    //file_1.h
+    extern const int buffsize;     //same buffsize as defined in file_1.cc
