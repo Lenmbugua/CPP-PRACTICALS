@@ -415,3 +415,30 @@ To share a const object among multiple files,we must define the variable as exte
     extern const int buffsize = fcn();
     //file_1.h
     extern const int buffsize;     //same buffsize as defined in file_1.cc
+**REFERENCES TO CONST**
+As with any other object, we can bind a reference to an object of a const type.
+To do so we use a reference to const-Reference that refers to a const type.
+Unlike an ordinary reference,a reference to const cannot be used to change the object to which the reference is bound.
+                Examples:
+                const int ci = 1024;
+                const int &r1 = c1;   //ok: both reference and underlying object are const
+                r1 = 42;              // error:r1 is a reference to const
+                int &r2 = ci;        //error: non const reference to a const object
+        **INITIALIZATION AND REFERENCES TO CONST**
+We can bind a reference to const to a nonconst object, a literal or a more general expression.
+Examples;
+int i = 42;
+const int &r1 = 1;          //we can bind a const int& to a plain int object
+const int &r2 = 42;         //ok:r2 is a reference to const
+const int &r3 = r1 * 2;     //ok:r3 is a reference to const
+int &r4 = r1 * 2;           //error:r4 is a plain,non const 
+The same initializations are not legal for nonconst references.
+They result in compile time errors.
+But why do they work for const references?
+Lets try to understand this behavious by taking a look at what happens when we bind a reference to an object of a different type.
+if we write:
+            double dval = 3.14;
+            const int &ri = dval
+The compiler translates the code to;
+                                  int temp = dval;                  //creates a temporary int from the double
+                                  const int &ri = temp;             //bind ri to that temporary.
