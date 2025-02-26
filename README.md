@@ -488,4 +488,21 @@ Note that the pointer types,unlike most of other types,can have both top-level a
  const int *p2 = &ci;         //we cannot change p2;const is low-level
  const int *const p3 = p2;    //right most const is top-level,left most is not
  const int &r = ci;           //const in reference type is always low-level
- 
+The distinction between top-level and low-level matters when we copy an object.
+When we copy an object,top-level consts are ignored.
+on the other hand,low-level const is never ignored.
+When we copy an object,both objects must have the same low-level const qualification or there must be a conversion between the types of the two objects.
+In general we can convert a nonconst to const and not viceversa.
+EXAMPLES:
+        INT I = 0;
+        CONST INT *P2 = &CI;
+        INT *CONST P1 = &I;
+        CONST INT *CONST P3 = P2;
+        CONST INT C1 = 42;
+        CONST INT &R = CI;
+I = CI;       //ok: copying the value of ci; top-level const in ci is ignored
+P2 = P3    //OK: pointed to type matches; top-level const in P3 is ignored
+INT *P = P3;  //ERROR:P3 has a low level const but P doesnt
+P2 = &I;      //OK:we can convert int* to const int*
+int &R = CI;   //ERROR:cant bind an ordinary int& to a const int object
+const INT &R2 = I;    //OK: can bind const int& to plain int.
