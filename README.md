@@ -442,3 +442,33 @@ if we write:
 The compiler translates the code to;
                                   int temp = dval;                  //creates a temporary int from the double
                                   const int &ri = temp;             //bind ri to that temporary.
+                        **POINTERS AND CONST**
+Like references, we can also define pointers that point to either const or nonconst types.
+Like a reference to const,a pointer to const may not be used to change the object to which the pointer points.
+We may store the address of a const object only in a pointer to const.
+EXAMPLES;
+            const double pi = 3.14;      //pi is const; its value may not be changed
+            double *ptr = &pi;           //error: ptr is a plain pointer
+            const double *cptr = &pu;    //ok: cptr may point to a double that is const
+            *cptr = 42;                  //error: cannot assign to *cptr
+            double dval = 3.14;          //dval is a double;its value can be changed
+            cptr = &dval;                //ok: but canr change dval through cptr
+     **CONST POINTER**
+Unlike references,pointers are objects.
+Hence,as with any other object type, we can have a pointer that is itself const. 
+Like any other const object,a const pointer must be initialized, and once initialized,its value(ie the address that it holds) may not be changed.
+                                                                indication that the pointer is const is when const happens after the *.-
+                                                                this placement indicates that its the pointer not the pointed to type that is const.
+    EXAMPLES;
+    int *const curErr = &errNumb;             //curErr will always point to errNumb
+    const double pi = 3.14159;
+    const double *const pip = &pi;            //pip is a const pointer to a const object 
+Read the declarations from right to left for easy understanding ie;
+1.int *const currErr = &errNumb;
+The symbol closest to curErr is const,which means that curErr itself will be a const object.
+*,means that curErr is a const pointer
+int base type of the declration -curErr is a const pointer to an object of type int.
+2. const double *const pip = &pi;
+Symbol closes to pip is const,which means that pip itself will be a const object
+*,means that pip is a const pointer.
+const double - base type of the declaration-pip is a const pointer to an object of type const double.
