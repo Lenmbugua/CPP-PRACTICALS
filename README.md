@@ -472,3 +472,20 @@ int base type of the declration -curErr is a const pointer to an object of type 
 Symbol closes to pip is const,which means that pip itself will be a const object
 *,means that pip is a const pointer.
 const double - base type of the declaration-pip is a const pointer to an object of type const double.
+
+                **TOP LEVEL AND LOW LEVEL CONST**
+A pointer is an object that can point to a difeferent object.
+So, we can talk indipendently about whether a pointer is const and whether the objects to which it can point are const.
+Top-level const: indicates thet the pointer itself is a const.
+Low-level const: When a pointer can point to a const object,we refer to that const as a low-level const.
+                Can appear in any object type,ie one of the built-in arithmetic types,a class type,or a pointer type.
+Low level const apperas in the base type of compound types such as pointers or references.
+Note that the pointer types,unlike most of other types,can have both top-level and low-level const indipendently.
+        **EXAMPLES**:
+ int i = 0; 
+ int *const p1 = &i;          //we cant change the value of p1;const is top-level
+ const int ci = 42;           //we cannot change ci; const is top-level
+ const int *p2 = &ci;         //we cannot change p2;const is low-level
+ const int *const p3 = p2;    //right most const is top-level,left most is not
+ const int &r = ci;           //const in reference type is always low-level
+ 
