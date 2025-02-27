@@ -512,3 +512,13 @@ A constant expression is an expression whose value cannot change and that can be
 A literal is a constant expression.
 A const object that is initialized from a constant expression is also a constant expression
 whether a given object(or expression) is a constant expression depends on the types and the initializers.
+                   EXAMPLES;
+const int max_files = 20;       //max_files is a constant expression
+const int limit = max_files + 1;   //limit is a constant expression
+int staff_size = 27;          //staff_size is not a constant expression
+const int sz = get_size();    //sz is not a constant expression
+
+                **constexpression variables(constexpr)**
+In a large system, it can be difficult to determine (for certain) that an initializer is a constant expression.
+Under the new standard, we can ask the compiler to verify that a variable is a constant expression by declaring the variable in a constexpr declaration.
+Variables declared in a constexpr are implicitly const and must be initialized by constant expressions.
