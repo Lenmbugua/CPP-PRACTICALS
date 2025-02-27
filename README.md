@@ -506,3 +506,9 @@ INT *P = P3;  //ERROR:P3 has a low level const but P doesnt
 P2 = &I;      //OK:we can convert int* to const int*
 int &R = CI;   //ERROR:cant bind an ordinary int& to a const int object
 const INT &R2 = I;    //OK: can bind const int& to plain int.
+
+                **CONSTANT EXPRESSIONS**
+A constant expression is an expression whose value cannot change and that can be evaluated at compile time.
+A literal is a constant expression.
+A const object that is initialized from a constant expression is also a constant expression
+whether a given object(or expression) is a constant expression depends on the types and the initializers.
