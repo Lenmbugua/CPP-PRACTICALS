@@ -522,3 +522,17 @@ const int sz = get_size();    //sz is not a constant expression
 In a large system, it can be difficult to determine (for certain) that an initializer is a constant expression.
 Under the new standard, we can ask the compiler to verify that a variable is a constant expression by declaring the variable in a constexpr declaration.
 Variables declared in a constexpr are implicitly const and must be initialized by constant expressions.
+                            **EXAMPLES**
+constexpr int mf = 20;      //20 is a constant expression
+constexpr int limit = mf + 1;     //mf + 1 is a constant expression
+constexpr int sz = size();       //ok only if size is a constexpr function
+NB\\
+        Generally, it is a good idea to use constexpr for variables that you intend to use as constant expressions.
+
+                                        **POINTERS AND CONSTEXPR**
+When we define a pointer in a constexpr declaration,the constexpr specifier applies to the pointer and not the type to which the pointer points.
+EXAMPLES;
+            const int *P = nullptr;      // p is a pointer to a const int
+            constexpr int *q = nullptr;  //q is a const pointer to Int
+            p is a pointer to const,whereas q is a constant pointer.
+            The difference is a consiquence of the fact that constexpr imposes top-level const on the objects it defines.
