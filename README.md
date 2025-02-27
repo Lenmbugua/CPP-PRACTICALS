@@ -536,3 +536,10 @@ EXAMPLES;
             constexpr int *q = nullptr;  //q is a const pointer to Int
             p is a pointer to const,whereas q is a constant pointer.
             The difference is a consiquence of the fact that constexpr imposes top-level const on the objects it defines.
+    **Examples**
+    constexpr int *np = nullptr;    // np is a constant pointer to int that is null
+    int j = 0;
+    constexpr int i = 42;       //type of i is const int
+                                //i and j must be defined outside any function
+    constexpr const int *p = &i;    //p is a constant pointer to the const int i
+    constexpr int *p1 = &j;   //p1 is a constant pointer to the int j
