@@ -556,6 +556,13 @@ method 2:
         using char = letter;          //letter is a synonym for char
         using int = num;              //num is a synonym for int
 
+Pointers,const and Type aliases
+Declarations that use type aliases that represent compund types and const can yield surprising results Eg;
+typedef char *pstring;           //pstring is an alias for the type char
+const pstring cstr = 0;          //cstr is a constant pointer to char
+const pstring *ps;          //ps is a pointer to a constant pointer to char
+const char *cstr = 0;      //a pointer to const char
+
                         **CLASSES AND OBJECTS IN C++**
 C++ is an object-oriented programming language.
 
