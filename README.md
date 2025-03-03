@@ -543,6 +543,19 @@ EXAMPLES;
                                 //i and j must be defined outside any function
     constexpr const int *p = &i;    //p is a constant pointer to the const int i
     constexpr int *p1 = &j;   //p1 is a constant pointer to the int j
+                        **TYPES ALIASES**
+A type alias is a name that is a synonym for another type.
+We use them so that we can simplify complicated type definitions and to make them easier to use.
+We use them because it let us emphasizes the purpose for which a type is used.
+Method 1:
+        typedef
+        typedef double wages;         //wages is a synonym for double
+        typedef float percent;        //percent is a synonym for float.
+method 2:
+        using
+        using char = letter;          //letter is a synonym for char
+        using int = num;              //num is a synonym for int
+
                         **CLASSES AND OBJECTS IN C++**
 C++ is an object-oriented programming language.
 
