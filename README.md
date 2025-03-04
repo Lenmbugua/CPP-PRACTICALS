@@ -640,3 +640,65 @@ In the following example, we define a function inside the class, and we name it 
 Note: You access methods just like you access attributes; by creating an object of the class and using the dot syntax (.):
                     **Outside class definition**
 To define a function outside the class definition, you have to declare it inside the class and then define it outside of the class. This is done by specifiying the name of the class, followed the scope resolution :: operator, followed by the name of the function:
+
+                        **CLASSES AND OBJECTS IN DETAILS**
+So far, you have got very basic idea about C++ Classes and Objects. There are further interesting concepts related to C++ Classes and Objects which we will discuss in various sub-sections listed below −
+
+Sr.No	Concept & Description
+1	Class Member Functions
+A member function of a class is a function that has its definition or its prototype within the class definition like any other variable.
+
+2	Class Access Modifiers
+A class member can be defined as public, private or protected. By default members would be assumed as private.
+
+3	Constructor & Destructor
+A class constructor is a special function in a class that is called when a new object of the class is created. A destructor is also a special function which is called when created object is deleted.
+
+4	Copy Constructor
+The copy constructor is a constructor which creates an object by initializing it with an object of the same class, which has been created previously.
+
+5	Friend Functions
+A friend function is permitted full access to private and protected members of a class.
+
+6	Inline Functions
+With an inline function, the compiler tries to expand the code in the body of the function in place of a call to the function.
+
+7	this Pointer
+Every object has a special pointer this which points to the object itself.
+
+8	Pointer to C++ Classes
+A pointer to a class is done exactly the same way a pointer to a structure is. In fact a class is really just a structure with functions in it.
+
+9	Static Members of a Class
+Both data members and function members of a class can be declared as static.
+
+                                                    **C++ CLASS MEMBER FUNCTIONS**
+A member function of a class is a function that has its definition or its prototype within the class definition like any other variable. It operates on any object of the class of which it is a member, and has access to all the members of a class for that object.
+Let us take previously defined class to access the members of the class using a member function instead of directly accessing them −
+class Box {
+   public:
+      double length;         // Length of a box
+      double breadth;        // Breadth of a box
+      double height;         // Height of a box
+      double getVolume(void);// Returns box volume
+};
+
+                            **Defining Class Member Functions**
+Member functions can be defined within the class definition or separately using scope resolution operator, : −. Defining a member function within the class definition declares the function inline, even if you do not use the inline specifier. So either you can define Volume() function as below −
+                                                    **Defining Member Function inside the Class**
+                                                    class Box {
+                                                                public:
+                                                                    double length;      // Length of a box
+                                                                    double breadth;     // Breadth of a box
+                                                                    double height;      // Height of a box
+                                                                
+                                                                    double getVolume(void) {
+                                                                        return length * breadth * height;
+                                                                    }
+                                                                };
+                                                                **Defining Member Function outside of the Class**
+If you like, you can define the same function outside the class using the scope resolution operator (::) as follows −         
+                                                             double Box::getVolume(void) {
+                                                                            return length * breadth * height;
+                                                                            }      
+NOTE:Here, only important point is that you would have to use class name just before :: operator.                                                        
