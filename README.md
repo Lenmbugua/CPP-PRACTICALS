@@ -724,3 +724,19 @@ A class can have multiple public, protected, or private labeled sections. Each s
                                                                             };
                                                        **Public Access Modifier**
 The public access modifier defines public data members and member functions that are accessible from anywhere outside the class but within a program. You can set and get the value of public variables without any member function.
+                                                            **Private Access Modifier**
+The private access modifier defines private data members and member functions that cannot be accessed, or even viewed from outside the class. Only the class and friend functions can access private members.
+
+By default all the members of a class would be private, for example in the following class width is a private member, which means until you label a member, it will be assumed a private member.
+
+Example
+The following example demonstrates the use of private access modifier −
+                                                                class Box {
+                                                                            double width;
+                                                                            
+                                                                            public:
+                                                                                double length;
+                                                                                void setWidth( double wid );
+                                                                                double getWidth( void );
+                                                                            };
+
