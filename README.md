@@ -707,3 +707,20 @@ A member function will be called using a dot operator (.) on a object where it w
                                                                                             Box myBox;          // Create an object
 
                                                                                             myBox.getVolume();  // Call member function for the object
+
+                                        **C++ ACCESS MODIFIERS**
+C++ access modifiers are used for data hiding implementation. Data hiding is one of the important features of object-oriented programming, which allows the functions of a program to access directly the internal representation of a class type. The access restriction to the class members is specified by the labeled public, private, and protected sections within the class body. The keywords public, private, and protected are called access specifiers.
+
+A class can have multiple public, protected, or private labeled sections. Each section remains in effect until either another section label or the closing right brace of the class body is seen. The default access for members and classes is private.Example:
+                                                                class Base { 
+                                                                            public:
+                                                                                // public members go here
+                                                                                protected:
+                                                                            
+                                                                            // protected members go here
+                                                                            private:
+                                                                            // private members go here
+                                                                            
+                                                                            };
+                                                       **Public Access Modifier**
+The public access modifier defines public data members and member functions that are accessible from anywhere outside the class but within a program. You can set and get the value of public variables without any member function.
