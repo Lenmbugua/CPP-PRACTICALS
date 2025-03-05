@@ -739,4 +739,7 @@ The following example demonstrates the use of private access modifier −
                                                                                 void setWidth( double wid );
                                                                                 double getWidth( void );
                                                                             };
+                                                                **Protected Access Modifier**
+The protected access modifier defines protected data members and member functions that are very similar to a private member, but it provides one additional benefit that they can be accessed in child classes, which are called derived classes.
 
+You will learn derived classes and inheritance in next chapter. For now you can check following example where I have derived one child class SmallBox from a parent class Box.
