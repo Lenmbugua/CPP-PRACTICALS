@@ -756,3 +756,36 @@ By declaring a function member as static, you make it independent of any particu
 A static member function can be called even if no objects of the class exist and the static functions are accessed using only the class name and the scope resolution operator ::.
 Static member functions have a class scope and they do not have access to the this pointer of the class. 
 You could use a static member function to determine whether some objects of the class have been created or not.
+
+                                                                **Static Data members**
+In C++, a static data member is a class member or class-level variable, which is shared by all instances(objects) of that class. This is not like regular data members, which have separate copies for each object of the class, a static data member has only one copy for the entire class, which can be shared across all instances, which means that all objects of the class can access and modify the same value.
+
+                                                            **Static Data Member Declaration**
+This is the following syntax for declaring a static data member inside the class using a static keyword.
+                                                                                                        class ClassName {
+                                                                                                                            public:
+                                                                                                                                static dataType staticMemberName; 
+                                                                                                                            };
+
+                                                            **Static Data Member Initialization**
+This is the following syntax for defining and initializing a static data member outside the class, which is done using ClassName:: scope resolution operator.
+                                                                                            Example;
+                                                                                           dataType ClassName::staticMemberName = initialValue; 
+
+                                                            **Accessing Static Data Members**
+Static data members can be accessed in two ways, that is −
+                            Using the Class Name (Recommended)
+                            Using an Object (Not Recommended)
+                                           **Accessing Static Data Members Using the Class Name**
+This is the very common and preferred way of accessing a static data member, which is done by using the scope resolution operator ::
+
+Syntax
+Here is the following syntax for it.; 
+                                    ClassName::staticDataMember;
+
+                                    **Accessing Static Data Members Using an Object**
+You can also access a static data member using an object, but it's generally not recommended because static members are independent of any specific object, and using an object can mislead it.
+
+Syntax
+Here is the following syntax for it;
+                                        objectName.staticDataMember;
