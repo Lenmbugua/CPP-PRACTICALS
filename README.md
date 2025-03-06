@@ -807,3 +807,17 @@ The implementation of design patterns, such as Singleton, is also advantageous, 
 
 5. Tracking global counters or actions across objects
 It also helps in tracking a global count of a particular object or action, like counting the number of logins, transactions, or events.
+
+                                            **Static Member Function**
+Static Member Function in C++ is a special kind of function that belongs to the class itself rather than any specific object. A static keyword is used to define those functions. They can be directly called by using just the class name, without creating an instance of the class, which is an object.
+
+These are only accessible within the body of the class they are defined in, thus, implementing class-wide operations and certain security measures.
+Syntax
+Here is the given syntax for static member functions in C++:
+                                                    class ClassName {
+                                                    public:
+                                                        static returnType functionName(parameters) {
+                                                            // Function body
+                                                        }
+                                                    };
+                                                    
