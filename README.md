@@ -833,3 +833,25 @@ A function definition in a class definition is an inline function definition, ev
 
 **Inline Function with Classes**
 By default, all the functions that are defined inside a class are implicitly inline. If you want to explicitly define a function as inline, then you have to declare a function inside the class and write its definition outside the class. The inline keyword is used with the function definition that is outside of the class declaration.
+
+**Advantages of Inline Function**
+The following are the advantages of using inline function −
+
+In the case of an inline function, the function call overhead does not occur.
+The inline function saves the overhead of the push and pop variables on the stack, when the function is called.
+An inline function saves the overhead of a return call from a function.
+When an inline function is created, the compiler may perform context specific optimization on the body of the function. This kind of optimization is not performed for normal functions.
+Using small inline functions may be useful for embedded systems, because inline can yield less code than the function call preamble and return.
+Disadvantages of Inline Function
+**Some of the disadvantages of inline functions are as follows** 
+
+When we use an inline function, the size of the code is increased because the compiler replaces each function call with the inline function code.
+Large sized code takes more memory and time to compiler the code.
+The compilation process slows down because the compiler evaluates and replaces the function code at the place function calls.
+In some of the cases, the program's performance may slow down.
+Based on the function code complexity, the compiler may ignore the inline keyword. Thus, the application of the inline function is limited.
+
+**this Pointer**
+Every object in C++ has access to its own address through an important pointer called this pointer. The this pointer is an implicit parameter for all member functions. Therefore, inside a member function, this may be used to refer to the invoking object.
+
+Friend functions do not have a this pointer because friends are not members of a class. Only member functions have this pointer.
