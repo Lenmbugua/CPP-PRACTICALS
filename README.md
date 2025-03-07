@@ -855,3 +855,14 @@ Based on the function code complexity, the compiler may ignore the inline keywor
 Every object in C++ has access to its own address through an important pointer called this pointer. The this pointer is an implicit parameter for all member functions. Therefore, inside a member function, this may be used to refer to the invoking object.
 
 Friend functions do not have a this pointer because friends are not members of a class. Only member functions have this pointer.
+
+**Return Calling Object's Reference Using this Pointer**
+To implement chain function calls, you need the reference of a calling object. You can use the "this" pointer to return the reference of the calling object.
+
+Syntax
+Here is the syntax:
+
+Test& Test::func ()
+{
+   return *this;
+}
