@@ -830,3 +830,6 @@ Any change to an inline function could require all clients of the function to be
 To define an inline function, place the keyword inline before the function name and define the function before any calls are made to the function. The compiler can ignore the inline qualifier in case defined function is more than a line.
 
 A function definition in a class definition is an inline function definition, even without the use of the inline specifier.
+
+**Inline Function with Classes**
+By default, all the functions that are defined inside a class are implicitly inline. If you want to explicitly define a function as inline, then you have to declare a function inside the class and write its definition outside the class. The inline keyword is used with the function definition that is outside of the class declaration.
