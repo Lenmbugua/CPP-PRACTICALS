@@ -920,5 +920,14 @@ To declare all member functions of class ClassTwo as friends of class ClassOne, 
                                                                                                                                
 **Accessing Private and Protected Members**
 The private and protected members of a class are not accessible outside of the class. Still, if you want to access them, you can use the friend function. The friend function provides the ability to directly access the class's private and protected members.
+**Friend Function vs Member Function**
+In C++, both friend functions and member functions are used to access and manipulate the data of a class, but still, they have significant differences in their scope and usage.
 
-            
+**Friend Function**
+A friend Function is a non-member function that is declared inside a class using the "friend" keyword, it has special access to the class's private and protected members. Since it's not a member it is not bound to a specific object, can't overloaded based on objects, not use this pointer, and cannot be inherited by derived classes. They are defined outside the class but declared inside it.
+
+**Member function**
+Whereas the member function is defined within the class and operates using this pointer. It can access all members of the class (private, protected, and public), and as it is tied to class objects, it can be overloaded and inherited by derived classes.
+
+**Pointer to Classes**
+A pointer to a C++ class is done exactly the same way as a pointer to a structure and to access members of a pointer to a class you use the member access operator -> operator, just as you do with pointers to structures. Also as with all pointers, you must initialize the pointer before using it.           
