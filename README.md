@@ -896,3 +896,24 @@ It can help differentiate between member variables and local variables when thei
 this pointer always refers to the current object, but using it after the object is destroyed or while it’s being destroyed can cause undefined behavior.
 When dealing with multiple inheritance, conflicts can occur if different base classes share members with identical names. This can make it unclear which member the this pointer is pointing to, leading to ambiguity.
 Returning *this from a temporary object can be risky since it might leave behind a dangling reference, which could cause unexpected or undefined behavior.
+
+
+**C++ Friend Functions**
+A Friend function of a class is defined outside that class scope but it has the right to access all private and protected members of that class.
+Even though the prototypes for friend functions appear in the class definition, friends are not member functions.
+A friend can be a function, function template, member function, or a class or class template, in which case the entire class and all of its members are friends.
+**Declaring Friend Function**
+To declare a function as a friend of a class, precede the function prototype in the class definition with the keyword friend as follows −
+
+Syntax:
+                                        class Box {
+                                        double width;
+                                        
+                                        public:
+                                            double length;
+                                            friend void printWidth( Box box );
+                                            void setWidth( double wid );
+                                        };
+To declare all member functions of class ClassTwo as friends of class ClassOne, place a following declaration in the definition of class ClassOne −
+
+                                                                                                                                        friend class ClassTwo;
