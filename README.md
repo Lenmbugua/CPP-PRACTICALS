@@ -930,4 +930,10 @@ A friend Function is a non-member function that is declared inside a class using
 Whereas the member function is defined within the class and operates using this pointer. It can access all members of the class (private, protected, and public), and as it is tied to class objects, it can be overloaded and inherited by derived classes.
 
 **Pointer to Classes**
-A pointer to a C++ class is done exactly the same way as a pointer to a structure and to access members of a pointer to a class you use the member access operator -> operator, just as you do with pointers to structures. Also as with all pointers, you must initialize the pointer before using it.           
+A pointer to a C++ class is done exactly the same way as a pointer to a structure and to access members of a pointer to a class you use the member access operator -> operator, just as you do with pointers to structures. Also as with all pointers, you must initialize the pointer before using it.     
+**The Class Constructor**
+A class constructor is a special member function of a class that is executed whenever we create new objects of that class.
+
+A constructor will have exact same name as the class and it does not have any return type at all, not even void. Constructors can be very useful for setting initial values for certain member variables.
+
+
