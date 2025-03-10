@@ -916,4 +916,9 @@ Syntax:
                                         };
 To declare all member functions of class ClassTwo as friends of class ClassOne, place a following declaration in the definition of class ClassOne −
 
-                                                                                                                                        friend class ClassTwo;
+                                                                                                                               friend class ClassTwo;
+                                                                                                                               
+**Accessing Private and Protected Members**
+The private and protected members of a class are not accessible outside of the class. Still, if you want to access them, you can use the friend function. The friend function provides the ability to directly access the class's private and protected members.
+
+            
