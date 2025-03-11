@@ -3,7 +3,7 @@ using namespace std;
 int main() {
     int creditscore;
     cout << "Enter the credit score of the applicant: " << endl;
-    cin >> creditscore ;
+    cin >> creditscore;
     switch (creditscore) {
         case 3:
         cout << "Amount: 15,000" << endl;
