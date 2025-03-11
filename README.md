@@ -940,5 +940,28 @@ A constructor will have exact same name as the class and it does not have any re
 A default constructor does not have any parameter, but if you need, a constructor can have parameters.
 This helps you to assign initial value to an object at the time of its creation.
 
+**Using Initialization Lists to Initialize Fields**
+In case of parameterized constructor, you can use following syntax to initialize the fields −
+
+Line::Line( double len): length(len) {
+   cout << "Object is being created, length = " << len << endl;
+}
+Above syntax is equal to the following syntax −
+
+Line::Line( double len) {
+   cout << "Object is being created, length = " << len << endl;
+   length = len;
+}
+If for a class C, you have multiple fields X, Y, Z, etc., to be initialized, then use can use same syntax and separate the fields by comma as follows −
+C::C( double a, double b, double c): X(a), Y(b), Z(c) {
+   ....
+}
+**The Class Destructor**
+A destructor is a special member function of a class that is executed whenever an object of it's class goes out of scope or whenever the delete expression is applied to a pointer to the object of that class.
+
+A destructor will have exact same name as the class prefixed with a tilde (~) and it can neither return a value nor can it take any parameters. Destructor can be very useful for releasing resources before coming out of the program like closing files, releasing memories etc.
+
+
+
 
 
