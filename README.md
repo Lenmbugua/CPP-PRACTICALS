@@ -936,4 +936,9 @@ A class constructor is a special member function of a class that is executed whe
 
 A constructor will have exact same name as the class and it does not have any return type at all, not even void. Constructors can be very useful for setting initial values for certain member variables.
 
+**Parametirized Constructor**
+A default constructor does not have any parameter, but if you need, a constructor can have parameters.
+This helps you to assign initial value to an object at the time of its creation.
+
+
 
