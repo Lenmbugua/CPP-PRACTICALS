@@ -1007,4 +1007,15 @@ Here is the following Syntax for the Default constructor.
 **Overloading the Default Constructor**
 In C++, overloading the default constructor is said to create multiple constructors within a class, where each constructor has a different parameter list, allowing for different ways of initializing objects
 
+**Copy constructors**
+The copy constructor is a constructor that creates an object by initializing it with an object of the same class which has been created previously. The copy constructor is used to −
 
+Initialize one object from another of the same type.
+Copy an object to pass it as an argument to a function.
+Copy an object to return it from a function.
+If a copy constructor is not defined in a class, the compiler itself defines one.If the class has pointer variables and has some dynamic memory allocations, then it is a must to have a copy constructor.
+Syntax
+The most common form of copy constructor is shown here −
+                                                classname (const classname &obj) {
+                                                // body of constructor
+                                                }
