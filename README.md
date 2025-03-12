@@ -973,8 +973,38 @@ Here is the following syntax for a default constructor:
                                                                 // Default constructor body
                                                             }
                                                         };
+**Implicit vs Explicit Default Constructors**
+In object-oriented programming (OOP), depending on how a default constructor is declared, it can be divided into two categories, implicit and explicit.
 
+1. Implicit Default Constructor
+An implicit default constructor is a constructor that is automatically called by the complier when an object is created, it may also be invoked if the user passes arguments that would be convertible into the constructor's parameters.
+Syntax;
+            class MyClass {
+            int x;
+            double y;
+            };
 
+            int main() {
+            MyClass obj;  // Implicit default constructor is called
+            }
+ 2. Explicit Default Constructor
+An explicit default constructor is the one where the constructor is not allowed to be called implicitly by the compiler when performing automatic type conversions or copy-initialization. In other words, the user can only call directly when providing a matching argument.           
+Syntax;
+            class ClassName {
+            public:
+                explicit ClassName(int x = 10);  // Explicit constructor
+            };
+**Default Constructor vs Parameterized Constructor**
+A default constructor is a constructor, which takes no parameter or has all its parameters set to default values.
 
+Whereas a parameterized constructor is a constructor, which takes one or more arguments. It allows users to pass values during the creation of an object, which is further used for the initialization of an object.
+
+In this tutorial, we will basically learn about the default constructor.
+
+Syntax
+Here is the following Syntax for the Default constructor.
+
+**Overloading the Default Constructor**
+In C++, overloading the default constructor is said to create multiple constructors within a class, where each constructor has a different parameter list, allowing for different ways of initializing objects
 
 
