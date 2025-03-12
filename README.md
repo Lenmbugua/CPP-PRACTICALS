@@ -961,6 +961,19 @@ A destructor is a special member function of a class that is executed whenever a
 
 A destructor will have exact same name as the class prefixed with a tilde (~) and it can neither return a value nor can it take any parameters. Destructor can be very useful for releasing resources before coming out of the program like closing files, releasing memories etc.
 
+Constructors are functions of a class that are executed when new objects of the class are created. The constructors have the same name as the class and no return type, not even void. They are primarily useful for providing initial values for variables of the class. The two main types of constructors are default constructors and parameterized constructors.
+
+**Default Constructors**
+C++ default constructors do not take any parameters. If a default constructor is not provided by the programmer explicitly, then the compiler provides a implicit default constructor. In that case, the default values of the variables are 0.
+Syntax
+Here is the following syntax for a default constructor:
+                                                        class MyClass {
+                                                        public:
+                                                            MyClass() {
+                                                                // Default constructor body
+                                                            }
+                                                        };
+
 
 
 
