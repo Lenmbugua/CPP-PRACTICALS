@@ -1019,3 +1019,15 @@ The most common form of copy constructor is shown here −
                                                 classname (const classname &obj) {
                                                 // body of constructor
                                                 }
+Implicit vs. Explicit Copy Constructors
+In C++, there are two types of Copy Constructors that's Implicit and Explicit. Here we will discuss the difference between these two.
+
+Implicit Copy Constructor
+If the user doesn't define their own copy constructor, then the compiler automatically provides an implicit copy constructor. It performs a shallow copy of the object, which means that it copies the values of each member of the object to the new object.
+
+When is the Implicit Copy Constructor called?
+When a user passes an object by value to a function.
+When the user returns an object by value from a function.
+When the user initializes an object with another object of the same type (copy initialization).
+Explicit (User-Defined) Copy Constructor
+It is the user-defined constructor. This gives you access to customize the copy behavior like creating a deep copy instead of the default shallow copy.
