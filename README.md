@@ -1031,3 +1031,21 @@ When the user returns an object by value from a function.
 When the user initializes an object with another object of the same type (copy initialization).
 Explicit (User-Defined) Copy Constructor
 It is the user-defined constructor. This gives you access to customize the copy behavior like creating a deep copy instead of the default shallow copy.
+
+**Rule of Three/Five**
+The Rule of Three and Rule of Five suggest while defining a copy constructor (ClassName(const ClassName& other)) you should also define:
+
+The Rule of Three and Rule of Five suggest while defining a copy constructor (ClassName(const ClassName& other)) you should also define:
+
+Rule of Three:
+destructor (~ClassName()).
+And copy assignment operator (ClassName& operator=(const ClassName& other)), to ensure that memory is correctly managed.
+Rule of Five:
+move constructor (ClassName(ClassName&& other)).
+move assignment operator (ClassName& operator=(ClassName&& other))". 
+These special member functions are necessary for the proper management of dynamic memory and other and other resources like file handling or network connections in a class.
+**Deep Copy vs. Shallow Copy**
+In C++, deep copy and shallow copy are different ways of copying objects and they are important when a class involves dynamic memory management.
+
+1. Shallow Copy
+It occurs when an object is copied in such a way that both original and copied objects share the same resources. This means that the copy constructor or copy assignment operator simply copies the values of data members (like pointers), without allocating new memory or making independent copies of the resources.
