@@ -1049,3 +1049,8 @@ In C++, deep copy and shallow copy are different ways of copying objects and the
 
 1. Shallow Copy
 It occurs when an object is copied in such a way that both original and copied objects share the same resources. This means that the copy constructor or copy assignment operator simply copies the values of data members (like pointers), without allocating new memory or making independent copies of the resources.
+**Constructor Overloading**
+In C++, constructor overloading is a concept in object-oriented programming (OOP), where the user can define multiple constructors with the same name in a class with each having a different parameter list.
+
+Syntax
+Here's the syntax for constructor overloading in C++.
