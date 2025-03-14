@@ -1111,3 +1111,45 @@ class Box {
 
       Box(int l = 5, int w = 10) : length(l), width(w) {}
 };
+**C++ Delegating Constructors**
+Delegating constructors is a feature that simplifies the way constructors in a class handle the initialization task. It makes it easier to maintain object initialization by reducing redundancy, and by allowing one constructor to call another in the same class.
+
+Use of Delegating Constructors
+In class design, multiple constructors are often used to handle different initialization scenarios. However, this can lead to repetitive code because each constructor may duplicate similar initialization logic.
+By using the delegating constructors, code redundancy can be avoided. A single "main" constructor can handle most initialization tasks, while other constructors delegate to it.
+
+This approach follows the DRY (Don't Repeat Yourself) principle and makes the code easier to maintain
+
+Syntax of Delegating Constructors
+The syntax for a delegating constructor involves calling another constructor in the initializer list
+class Example {
+   public:
+   
+      // Primary constructor	  
+      Example(int value) : data(value) {}
+
+      // Delegating constructor
+      Example() : Example(0) {}
+
+   private:
+      int data;
+};
+
+Where,
+
+The Example(int value) is the main constructor that does the real initialization.
+Example() is a delegating constructor that calls Example(int value) with a default value of 0.
+
+Rules for Using Delegating Constructors
+The following rules are applied when using delegating constructors in C++11 and later:
+
+A constructor can delegate to only one other constructor in C++11 and later.
+Delegation must occur within the same class.
+Circular delegation (like A() : A(x) and A(x) : A()) is prohibited and will result in a compile-time error.
+
+**Advantages of Delegating Constructors**
+The following are the advantages of using delegating constructors:
+
+Centralized Initialization − By consolidating initialization logic into a single constructor, your code becomes easier to read and maintain
+Avoidance of Redundancy − Reusing constructor logic eliminates duplicated code.
+Ease of Modification − Changes to initialization logic need to be made only in the primary constructor.
