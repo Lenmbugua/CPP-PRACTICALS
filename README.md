@@ -1153,3 +1153,44 @@ The following are the advantages of using delegating constructors:
 Centralized Initialization − By consolidating initialization logic into a single constructor, your code becomes easier to read and maintain
 Avoidance of Redundancy − Reusing constructor logic eliminates duplicated code.
 Ease of Modification − Changes to initialization logic need to be made only in the primary constructor.
+When instantiating objects, constructors often handle the initialization of member variables. For such members, an initialization list for constructors provides an abbreviated and efficient way of their initialization before the constructor's body is executed. Apart from performance, sometimes it also compulsory because of const variables or members of a base class.
+
+What is a Constructor Initialization List?
+A constructor initialization list is a procedure to initialize member variables directly, hence, there is no default constructor that is copied and then assigned.
+
+syntax
+ClassName(type1 param1, type2 param2) : member1(param1), member2(param2) {
+
+   // Constructor body
+   
+}
+Here, member1 and member2 are initialized with param1 and param2 before the constructor body runs.
+**Special Cases**
+In the following, we will discuss few special cases for constructor initialization list −
+
+Const or Reference Members
+Const variables and reference members cannot be reassigned, so they must be initialized in an initialization list,
+class Config {
+public:
+   Config(const std::string& product, const int & model) 
+      : product (product), model(model) {}
+
+   private:
+      const std::string product;
+      const int & model; 
+};
+**Base Class Initialization**
+When a derived class inherits from a base class, you can use an initialization list to call the base class constructor,
+class Base {
+   public:
+      Base(int value) : baseValue(value) {}
+      protected:
+      int baseValue;
+};
+class Derived : public Base {
+   public:
+      Derived(int value, int extra) : Base(value), extraValue(extra) {}
+
+   private:
+      int extraValue;
+};
