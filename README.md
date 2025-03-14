@@ -1194,3 +1194,20 @@ class Derived : public Base {
    private:
       int extraValue;
 };
+**Dynamic Initialization Using Constructors**
+In C++, Dynamic initialization is the process of initializing variables or objects at runtime using constructors.
+
+Where constructors play an important role in object creation and can be used to initialize both static and dynamic data members of a class.
+
+
+While creating an object, its constructor is called and if the constructor contains logic to initialize the data members with values, is known as dynamic initialization. This is helpful because here the value is calculated, retrieved, or determined during runtime, which is more flexible than static initialization.
+
+Syntax
+Here is the following syntax for dynamic initialization using constructors.
+
+ClassName* objectName = new ClassName(constructor_arguments);
+Here, ClassName is the class type.
+
+objectName is the pointer to the object.
+
+constructor_arguments are the arguments passed to the constructor
