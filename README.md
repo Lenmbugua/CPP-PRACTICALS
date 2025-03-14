@@ -1084,3 +1084,30 @@ class ClassName {
 Here, the constructor has the same name as the class
 Default values are provided for one or more parameters.
 If no value is passed by the user, then this default value will be used.
+**Constructor with Multiple Default Arguments**
+A constructor with multiple default arguments gives the user access to specify default values for more than one parameter. This provides more flexibility and access to pass any combination of arguments.
+**Key Features of Constructors with Default Arguments**
+While it is similar to regular functions, it provides more flexibility and convenience while creating objects.
+
+Here in the following, we will discuss its all key features.
+
+1. Default values for parameters and flexibility in object creation
+Here the constructor can have default values for one or more parameters, which can be used when no argument is provided by the caller and allows multiple ways to create an object.
+
+2. Avoiding multiple constructor overloads
+You might need to load the constructor for every combination of arguments, which will make the code bulkier, but with default arguments, the constructor can be written once and it will handle different cases automatically.
+
+3. Order of Default Arguments
+In the case of multiple default value parameters, you cannot skip default arguments in the middle once you start providing defaults from the right.
+
+Syntax
+Box(int l = 1, int w);  // Invalid: 'w' has no default, but 'l' does.
+4. Default Arguments Can Be Used with Const Members
+If your class has const members, then default arguments can be provided in the constructor to make initialization easier.
+Syntax
+class Box {
+   public:
+      const int length, width;
+
+      Box(int l = 5, int w = 10) : length(l), width(w) {}
+};
