@@ -1247,3 +1247,19 @@ and here is the extended syntax −
 
 class derived-class: access baseA, access baseB....
 Where access is one of public, protected, or private and would be given for every base class and they will be separated by comma as shown above. 
+Multiple inheritance in C++ is a feature that allows a class to inherit from more than one base class, which means a derived class can have multiple parent classes and inherit attributes and behaviors from all the base classes.
+**Implementing Multiple Inheritance**
+To implement multiple inheritance, you need to specify multiple base classes in the derived class and declare it using a comma-separated list.
+Syntax
+The syntax of multiple inheritance in C++ is −
+class Base1 {
+   // Base class 1 members
+};
+
+class Base2 {
+   // Base class 2 members
+};
+
+class Derived : public Base1, public Base2 {
+   // Derived class members
+};
