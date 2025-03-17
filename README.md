@@ -1221,3 +1221,29 @@ The idea of inheritance implements the is a relationship. For example, mammal IS
 A class can be derived from more than one classes, which means it can inherit data and functions from multiple base classes. To define a derived class, we use a class derivation list to specify the base class(es). A class derivation list names one or more base classes and has the form −
                                                                                                         class derived-class: access-specifier base-class
 Where access-specifier is one of public, protected, or private, and base-class is the name of a previously defined class. If the access-specifier is not used, then it is private by default.
+**Access Control and Inheritance**
+A derived class can access all the non-private members of its base class. Thus base-class members that should not be accessible to the member functions of derived classes should be declared private in the base class.
+
+A derived class inherits all base class methods with the following exceptions −
+
+Constructors, destructors and copy constructors of the base class.
+Overloaded operators of the base class.
+The friend functions of the base class.
+**Type of Inheritance**
+When deriving a class from a base class, the base class may be inherited through public, protected or private inheritance. The type of inheritance is specified by the access-specifier as explained above.
+
+We hardly use protected or private inheritance, but public inheritance is commonly used. While using different type of inheritance, following rules are applied −
+
+Public Inheritance − When deriving a class from a public base class, public members of the base class become public members of the derived class and protected members of the base class become protected members of the derived class. A base class's private members are never accessible directly from a derived class, but can be accessed through calls to the public and protected members of the base class.
+
+Protected Inheritance − When deriving from a protected base class, public and protected members of the base class become protected members of the derived class.
+
+Private Inheritance − When deriving from a private base class, public and protected members of the base class become private members of the derived class.
+
+**Multiple Inheritance**
+A C++ class can inherit members from more than one class using multiple inheritance. Multiple inheritance is a feature that allows a class to inherit from more than one base class, which means a derived class can have multiple parent classes and inherit attributes and behaviors from all the base classes.
+
+and here is the extended syntax −
+
+class derived-class: access baseA, access baseB....
+Where access is one of public, protected, or private and would be given for every base class and they will be separated by comma as shown above. 
