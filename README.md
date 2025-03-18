@@ -1326,3 +1326,7 @@ Here,-
 baseClass is the top-level class from where other classes derive.
 derivedClass1 is the class that inherits from baseClass.
 derivedClass2 Inherits from derivedClass1, creating a multilevel structure.
+**C++ Overloading (Operator and Function)**
+C++ allows you to specify more than one definition for a function name or an operator in the same scope, which is called function overloading and operator overloading respectively.
+
+An overloaded declaration is a declaration that is declared with the same name as a previously declared declaration in the same scope, except that both declarations have different arguments and obviously different definition (implementation).
