@@ -1293,3 +1293,6 @@ Syntax
             };
 **Handling Ambiguity in Multiple Inheritance**
 Here we will demonstrate how to handle ambiguity in multiple inheritance by using explicit scope resolution to specify which base class's method should be called.
+
+**Diamond Problem in Multiple Inheritance**
+A diamond problem in C++ occurs when a class inherits from two classes that both inherit from a common base class, which ultimately creates ambiguity in the inheritance hierarchy as the derived class now has two copies of the common base class, leading to conflicts.
