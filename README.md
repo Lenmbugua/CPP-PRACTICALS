@@ -1263,3 +1263,33 @@ class Base2 {
 class Derived : public Base1, public Base2 {
    // Derived class members
 };
+**Challenges in Multiple Inheritance**
+Multiple inheritance in C++ allows a class to inherit from more than one base class which provides flexibility and reusability. However, it also introduces several challenges, discussed below −
+
+Ambiguity − When two or more base classes have members with the same name cause ambiguity.
+Diamond problem − It arises when a class inherits from two classes that both inherit from a common base class which causes ambiguity and conflicts due to multiple copies of the base class, which is ultimately known as the Diamond problem.
+
+**Ambiguity in Multiple Inheritance**
+If two or more base classes have members (functions or variables) with the same name, the compiler won't be able to decide which one to use, which ultimately leads to ambiguity.
+This can be resolved using scope resolution.
+
+Syntax
+            class Base1 {
+            public:
+            void show() { cout << "Base1 show" << endl; }
+            };
+
+            class Base2 {
+            public:
+                void show() { cout << "Base2 show" << endl; }
+            };
+
+            class Derived : public Base1, public Base2 {
+            public:
+                void show() {
+                    Base1::show(); // Explicitly calls Base1's show
+                    Base2::show(); // Explicitly calls Base2's show
+                }
+            };
+**Handling Ambiguity in Multiple Inheritance**
+Here we will demonstrate how to handle ambiguity in multiple inheritance by using explicit scope resolution to specify which base class's method should be called.
