@@ -1334,3 +1334,13 @@ When you call an overloaded function or operator, the compiler determines the mo
 
 **Function Overloading in C++**
 You can have multiple definitions for the same function name in the same scope. The definition of the function must differ from each other by the types and/or the number of arguments in the argument list. You cannot overload function declarations that differ only by return type.
+**Operators Overloading in C++**
+You can redefine or overload most of the built-in operators available in C++. Thus, a programmer can use operators with user-defined types as well.
+
+Overloaded operators are functions with special names: the keyword "operator" followed by the symbol for the operator being defined. Like any other function, an overloaded operator has a return type and a parameter list.
+
+Box operator+(const Box&);
+declares the addition operator that can be used to add two Box objects and returns final Box object. Most overloaded operators may be defined as ordinary non-member functions or as class member functions. In case we define above function as non-member function of a class then we would have to pass two arguments for each operand as follows −
+
+Box operator+(const Box&, const Box&);
+Following is the example to show the concept of operator over loading using a member function. Here an object is passed as an argument whose properties will be accessed using this object, the object which will call this operator can be accessed using this operator
