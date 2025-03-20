@@ -1354,3 +1354,21 @@ For example, think of a base class called Animal that has a method called animal
 
 **Encapsulation**
 The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must declare class variables/attributes as private (cannot be accessed from outside the class). If you want others to read or modify the value of a private member, you can provide public get and set methods.
+
+C++ supports the properties of encapsulation and data hiding through the creation of user-defined types, called classes. We already have studied that a class can contain private, protected and public members. By default, all items defined in a class are private. For example −
+                                                            class Box {
+                                                                            public:
+                                                                                double getVolume(void) {
+                                                                                    return length * breadth * height;
+                                                                                }
+
+                                                                            private:
+                                                                                double length;      // Length of a box
+                                                                                double breadth;     // Breadth of a box
+                                                                                double height;      // Height of a box
+                                                                            };
+ The variables length, breadth, and height are private. This means that they can be accessed only by other members of the Box class, and not by any other part of your program. This is one way encapsulation is achieved.
+
+To make parts of a class public (i.e., accessible to other parts of your program), you must declare them after the public keyword. All variables or functions defined after the public specifier are accessible by all other functions in your program.
+
+Making one class a friend of another exposes the implementation details and reduces encapsulation. The ideal is to keep as many of the details of each class hidden from all other classes as possible.                                                                           
