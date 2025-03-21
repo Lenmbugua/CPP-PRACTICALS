@@ -1437,3 +1437,112 @@ The purpose of an abstract class (often referred to as an ABC) is to provide an 
 Thus, if a subclass of an ABC needs to be instantiated, it has to implement each of the virtual functions, which means that it supports the interface declared by the ABC. Failure to override a pure virtual function in a derived class, then attempting to instantiate objects of that class, is a compilation error.
 
 Classes that can be used to instantiate objects are called concrete classes.
+
+**C++ Files**
+The fstream library allows us to work with files.
+
+To use the fstream library, include both the standard <iostream> AND the <fstream> header file:
+Example
+#include <iostream>
+#include <fstream>
+There are three classes included in the fstream library, which are used to create, write or read files:
+
+Class	Description
+ofstream	Creates and writes to files
+ifstream	Reads from files
+fstream	A combination of ofstream and ifstream: creates, reads, and writes to files
+Create and Write To a File
+To create a file, use either the ofstream or fstream class, and specify the name of the file.
+
+To write to the file, use the insertion operator (<<).
+
+Example
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+  // Create and open a text file
+  ofstream MyFile("filename.txt");
+
+  // Write to the file
+  MyFile << "Files can be tricky, but it is fun enough!";
+
+  // Close the file
+  MyFile.close();
+}
+Why do we close the file?
+It is considered good practice, and it can clean up unnecessary memory space.
+
+**Read a File**
+To read from a file, use either the ifstream or fstream class, and the name of the file.
+
+Note that we also use a while loop together with the getline() function (which belongs to the ifstream class) to read the file line by line, and to print the content of the file:
+
+Example
+// Create a text string, which is used to output the text file
+string myText;
+
+// Read from the text file
+ifstream MyReadFile("filename.txt");
+
+// Use a while loop together with the getline() function to read the file line by line
+while (getline (MyReadFile, myText)) {
+  // Output the text from the file
+  cout << myText;
+}
+
+// Close the file
+MyReadFile.close();
+
+Opening a File
+A file must be opened before you can read from it or write to it. Either ofstream or fstream object may be used to open a file for writing. And ifstream object is used to open a file for reading purpose only.
+
+Following is the standard syntax for open() function, which is a member of fstream, ifstream, and ofstream objects.
+Here, the first argument specifies the name and location of the file to be opened and the second argument of the open() member function defines the mode in which the file should be opened.
+
+Sr.No	Mode Flag & Description
+1	
+ios::app
+
+Append mode. All output to that file to be appended to the end.
+
+2	
+ios::ate
+
+Open a file for output and move the read/write control to the end of the file.
+
+3	
+ios::in
+
+Open a file for reading.
+
+4	
+ios::out
+
+Open a file for writing.
+
+5	
+ios::trunc
+
+If the file already exists, its contents will be truncated before opening the file.
+
+You can combine two or more of these values by ORing them together. For example if you want to open a file in write mode and want to truncate it in case that already exists, following will be the syntax −
+
+ofstream outfile;
+outfile.open("file.dat", ios::out | ios::trunc );
+Similar way, you can open a file for reading and writing purpose as follows −
+                                                fstream  afile;
+                                                afile.open("file.dat", ios::out | ios::in );
+
+Closing a File
+When a C++ program terminates it automatically flushes all the streams, release all the allocated memory and close all the opened files. But it is always a good practice that a programmer should close all the opened files before program termination.
+
+Following is the standard syntax for close() function, which is a member of fstream, ifstream, and ofstream objects:
+                                                                                                                    void close();
+
+**Writing to a File**
+While doing C++ programming, you write information to a file from your program using the stream insertion operator (<<) just as you use that operator to output information to the screen. The only difference is that you use an ofstream or fstream object instead of the cout object.
+
+**Reading from a File**
+You read information from a file into your program using the stream extraction operator (>>) just as you use that operator to input information from the keyboard. The only difference is that you use an ifstream or fstream object instead of the cin object.
