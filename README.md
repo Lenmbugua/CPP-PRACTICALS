@@ -1564,3 +1564,27 @@ The file-position pointer is an integer value that specifies the location in the
 
                             // position at end of fileObject
                             fileObject.seekg( 0, ios::end );
+          **C++ Reading From File**
+File I/O (Input/Output) in C++ is the process of reading and writing to files. C++ provides this for handling files through the standard library with <fstream> header file. File I/O allows programs to persist data, interact with external resources, and store/retrieve information beyond the scope of program execution.
+
+Types of File Streams
+There are three primary types of file streams, where each is associated with different operations −
+
+ifstream (Input File Stream) − This is used for reading data from a file.
+ofstream (Output File Stream) − This is used for writing data to a file.
+fstream (File Stream) − This is used for both input and output operations on a file. It combines the functionality of both ifstream and ofstream.
+
+Basic Steps in File I/O
+Here’s the given basic steps in file I/O −
+
+Opening a File
+Before reading or writing to a file, it must be opened using one of the file stream classes. If the file is successfully opened, the program will proceed with I/O operations.
+
+Performing File Operations
+You can read from or write to a file using the appropriate methods.
+
+Closing the File
+After the file operations are completed, you should close the file to make sure that all data is flushed and the file is properly released.
+
+Reading with ifstream (Stream Extraction Operator)
+Using stream extraction operator (>>) is the simplest way to read data from a file in C++. This operator reads formatted data from a file, similar to how data is read from standard input
