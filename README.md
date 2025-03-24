@@ -1588,3 +1588,7 @@ After the file operations are completed, you should close the file to make sure 
 
 Reading with ifstream (Stream Extraction Operator)
 Using stream extraction operator (>>) is the simplest way to read data from a file in C++. This operator reads formatted data from a file, similar to how data is read from standard input
+
+**Reading Binary Files (using read())**
+The above discussed methods are for text files, for binary files you can use the read() function to read raw binary data from a file.
+

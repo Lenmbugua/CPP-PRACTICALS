@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 int main () {
-    ifstream inputFile("example.csv");  //open the file for reading
+    ifstream inputFile("example.txt");  //open the file for reading
     if (!inputFile) {
         cerr << "Error opening file!" << endl;
         return 1;
